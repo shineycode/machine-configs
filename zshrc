@@ -51,20 +51,10 @@ alias mf='mdfind -onlyin'
 alias history='history -i'
 alias -s xcodeproj=/Applications/Xcode.app
 
-# Kermit and pico 
-alias kermit-ivy="kermit -m none -l /dev/tty.usbserial-AE01HVBF -b 115200 -c"
-alias kermit-bean="kermit -m none -l /dev/tty.usbserial-AH01K2TJ -b 115200 -c"
-alias kermit-zuzu="kermit -m none -l /dev/tty.usbserial-A901KNLY -b 115200 -c"
-alias kermit-babs="kermit -m none -l /dev/tty.usbserial-A601DMCT -b 115200 -c"
-
-alias pico-ivy="/opt/local/bin/picocom -b 115200 /dev/tty.usbserial-AE01HVBF"
-alias pico-bean="/opt/local/bin/picocom -b 115200 /dev/tty.usbserial-AH01K2TJ"
-alias pico-zuzu="/opt/local/bin/picocom -b 115200 /dev/tty.usbserial-A901KNLY"
-alias pico-babs="/opt/local/bin/picocom -b 115200 /dev/tty.usbserial-A601DMCT"
-
+# AppCode alias
 alias ac='open -a /Applications/AppCode.app/'
 
-#function kerm() { kermit -m none -l "$@" -b 115200 -c;}
+# Kermit 
 function kermi() { kermit -l "$@" -b 115200 -C "SET CARRIER-WATCH OFF, connect"; }
 
 function symbolicate_crash {
