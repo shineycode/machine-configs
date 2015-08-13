@@ -1,0 +1,57 @@
+[user]
+	name = Shiney Code
+	email = shineycode@gmail.com
+
+[core]
+	excludesfile = /Users/shiney/.gitignore_global
+  pager = cat
+
+[color]
+  ui = true
+  diff = auto
+  status = auto
+  branch = auto
+
+[alias]
+  co = checkout
+  st = status
+  br = branch
+  ci = commit
+  mc = merge --no-ff
+  df = diff
+  dc = diff --cached
+	
+  lg = log --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all	
+  hist = log --color --pretty=format:' %C(243)%h | %ad %Creset [%an] %C(032)%s%d'%Creset --date=short
+  filter = log --pretty=immersion --graph --date=short --first-parent --no-merges 
+  logg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+  rbm = rebase master
+
+  assume   = update-index --assume-unchanged
+  unassume = update-index --no-assume-unchanged
+  assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
+
+[push]
+  default = current
+
+[pretty] 
+  immersion = %h %ad | %s%d [%an] 
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustexitcode = true
+[merge]
+	tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f

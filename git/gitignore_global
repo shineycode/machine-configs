@@ -1,0 +1,27 @@
+# *~
+# 
+# # Mac OS X
+*.DS_Store
+
+# AppCode
+.idea/*
+source/.idea/*
+
+# Vi
+*.swp
+
+# 
+# # Xcode
+*.pbxuser
+*.mode1v3
+# *.mode2v3
+# *.perspectivev3
+# *.xcuserstate
+# #project.xcworkspace/
+# #xcuserdata
+# 
+# # Xcode per-user config
+# *.mode1
+# *.perspective
+# 
+# ##*.xcworkspace
