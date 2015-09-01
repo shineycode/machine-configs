@@ -1,6 +1,6 @@
 [user]
-	name = Shiney Code
-	email = shineycode@gmail.com
+  name = Shiney Code
+  email = shineycode
 
 [core]
 	excludesfile = /Users/shiney/.gitignore_global
